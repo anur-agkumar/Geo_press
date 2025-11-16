@@ -11,13 +11,7 @@ const CaseStudy = () => {
     { name: "Information Overload",info:"Citizens are bombarded with news from everywhere, not filtered by what's actually near them", img: "https://ik.imagekit.io/dyp7q5hzjq/New%20Folder/Gemini_Generated_Image_q5b6u9q5b6u9q5b6.png?updatedAt=1762833273200" },
     { name: "No Geographic Context",info:"News articles rarely include precise locations or maps, making it difficult to understand where incidents occur." ,img: "https://ik.imagekit.io/dyp7q5hzjq/New%20Folder/Gemini_Generated_Image_q9r4poq9r4poq9r4.png?updatedAt=1762833263209" },
     { name: "Slow Emergency Response",info:"During crises, every second counts. Manual location searches delay critical decision-making." ,img: "https://ik.imagekit.io/dyp7q5hzjq/New%20Folder/Gemini_Generated_Image_xbos3jxbos3jxbos.png?updatedAt=1762833227509" },
-    // { name: "Will", img: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/9c0637aa-b440-4aef-93f3-ea20cf19f42c" },
-    // { name: "Eleven", img: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/6a90b5ba-9f3e-4cb3-a8e2-3ae19b2aa443" },
-    // { name: "Dustin", img: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/fe05145f-c9ab-457f-a91b-92a4c1bd633c" },
-    // { name: "Eddie Munson", img: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/1158c3d4-81d5-4dfc-bb42-863f357ecdb5" },
-    // { name: "Steve", img: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c8ef23d2-37ee-4473-ad86-d9c9911be3bb" },
-    // { name: "Robin", img: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/29eff421-1087-4b51-92a2-a7f204098187" },
-  ];
+     ];
 
   return (
     <div
@@ -37,7 +31,7 @@ const CaseStudy = () => {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           grabCursor
           centeredSlides
-          slidesPerView={1.4} // ✅ Shows ~20% of prev & next card
+          slidesPerView={1.4} 
           spaceBetween={30}
           speed={800}
           pagination={{ clickable: true }}

@@ -9,7 +9,7 @@ function Catogories(){
     offset: ["start end", "end start"],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], [0, 200]); // move right 200px
+  const x = useTransform(scrollYProgress, [0, 1], [0, 200]); // move right 
 
 const y = useTransform(scrollYProgress, [0, 1], [0, 250]);
     

@@ -15,6 +15,7 @@ const Newsapp = () => {
 
   const API_URL = "https://691ad72b2d8d785575706193.mockapi.io/geopress/news";
 
+  // Fetch news data
   const getData = async (queryCity) => {
     try {
       setLoading(true);
@@ -25,45 +26,46 @@ const Newsapp = () => {
 
       const response = await fetch(query);
       const jsonData = await response.json();
-      setNewsData(jsonData.slice(0, 12));        // limit to 12 cards
+      setNewsData(jsonData.slice(0, 12)); // limit to 12 cards
     } catch (error) {
       console.error("Fetch Error:", error);
-      setNewsData([]);                          // for empty card 
+      setNewsData([]);
     } finally {
       setLoading(false);
     }
   };
 
-  // Jaise hi search change hota hai, ye effect chalega aur automatically data fetch karega.
-
+  // Fetch on initial load and when search changes
   useEffect(() => {
     if (search) getData(search);
   }, [search]);
 
-
-  // e.target.value   => Kisi bhi particular event ko target karne ke liye
+  // Handle typing in search input
   const handleInput = (e) => setSearch(e.target.value);
 
+  // Handle category button click
   const handleCategory = (city) => setSearch(city);
 
+  // If user info not loaded yet
   if (!user) return <div className="text-center mt-32 text-white">Loading user info...</div>;
 
   return (
     <div className="bg-[url(https://cdn.prod.website-files.com/6584ee98993ef2a2ba17f296/65850001dcdc7fa1686a8490_Noise_Black.webp)] w-full min-h-screen">
-     
+      {/* Navbar */}
       <div className="fixed top-0 left-0 w-full z-50">
         <Nav ismenuopen={ismenuopen} setismenuopen={setIsMenuOpen} />
       </div>
 
-     
+      {/* Menu */}
       {ismenuopen && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-40">
           <Menu setismenuopen={setIsMenuOpen} />
         </div>
       )}
 
-     
+      {/* Search + Categories */}
       <div className="w-full flex flex-col items-center pt-28">
+        {/* Search Bar */}
         <div className="flex items-center gap-2 w-[320px] sm:w-[400px] bg-white shadow-md rounded-full px-3 py-2">
           <input
             type="text"
@@ -80,6 +82,7 @@ const Newsapp = () => {
           </button>
         </div>
 
+        {/* Categories */}
         <div className="flex flex-wrap justify-center gap-3 mt-6">
           {["Delhi", "Mumbai", "Noida", "Pune", "Jaipur"].map((city) => (
             <button
@@ -93,6 +96,7 @@ const Newsapp = () => {
         </div>
       </div>
 
+      {/* Cards */}
       <div className="px-6 mt-8">
         {loading ? (
           <p className="text-white text-center mt-12">Loading news...</p>

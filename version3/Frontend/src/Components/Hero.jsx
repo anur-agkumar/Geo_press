@@ -8,17 +8,16 @@ function Hero() {
            <h1 className="text-8xl font-bold text-center uppercase"> Empowering Safety with WITH </h1>
            <div className="bg-[#D4F600] w-[650px] m-auto"><span  className=" text-black text-8xl font-bold ">TECHNOLOGY</span></div>
         </div>
-        {/* <div  className="w-0.5 h-[90px] bg-[#D4F600] mt-[100px] m-auto mb-3"></div> */}
 
 <div  className="w-0.5 h-[90px] mt-[100px] m-auto mb-3">
       <motion.div
         initial={{ height: 0 }}
-        animate={{ height: [0, 100, 0] }} // from point → line → point
+        animate={{ height: [0, 100, 0] }} 
         transition={{
-          duration: 2,          // total time for one cycle
-          ease: "easeInOut",    // smooth easing
-          repeat: Infinity,     // loop forever
-          repeatType: "mirror", // go back and forth
+          duration: 2,          
+          ease: "easeInOut",    
+          repeat: Infinity,     
+          repeatType: "mirror", 
         }}
         className="h-1 bg-[#D4F600] rounded-full"
       />

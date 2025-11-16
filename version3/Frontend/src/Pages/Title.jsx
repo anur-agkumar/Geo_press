@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './Title.css'
-
 import { useNavigate } from "react-router-dom";
 
 const postersLeft = [
@@ -22,7 +21,6 @@ const postersRight = [
 
 
 export default function Title() {
-
 let navigate=useNavigate();
 function onclicHandler(){
   navigate("/login");
@@ -34,7 +32,7 @@ function onclicHandlersignup(){
   return (
     <div className="min-h-screen bg-black flex justify-center items-center px-6 relative overflow-hidden">
 
-      {/* down */}
+      {/* (DOWN) */}
       <div className="hidden md:block absolute left-4 top-0 h-full overflow-hidden">
         <div className="scroll-down flex flex-col gap-4">
           {[...postersLeft, ...postersLeft].map((src, i) => (
@@ -43,7 +41,7 @@ function onclicHandlersignup(){
         </div>
       </div>
 
-      {/* up */}
+      {/*  (UP) */}
       <div className="hidden md:block absolute right-4 top-0 h-full overflow-hidden">
         <div className="scroll-up flex flex-col gap-4">
           {[...postersRight, ...postersRight].map((src, i) => (
@@ -52,7 +50,7 @@ function onclicHandlersignup(){
         </div>
       </div>
 
-      {/* CENTER CONTENT */}
+      {/* CONTENT */}
       <div className="text-center max-w-2xl z-10">
 <div className="flex flex-row justify-center gap-5">
     <img src="https://cdn.prod.website-files.com/6584ee98993ef2a2ba17f296/65877317a643aef5d531635e_Symbol_White.svg" 

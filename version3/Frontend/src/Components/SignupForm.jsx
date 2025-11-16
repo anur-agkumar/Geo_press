@@ -171,6 +171,7 @@ const SignupForm = ({ setLoggedIn }) => {
           </span>
         </div>
 
+        {/* Confirm Password */}
         <div className="relative">
           <label>
             <p className="mb-1 font-medium text-white">

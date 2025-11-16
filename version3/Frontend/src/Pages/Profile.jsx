@@ -106,6 +106,7 @@ const Profile = () => {
 
   return (
     <div className="min-h-screen bg-black p-6">
+      {/* Top Blue Bar */}
       <div className="bg-[#E0FF00] text-black rounded-xl p-4 flex justify-between items-center mb-10">
         <h1 className="text-sm font-semibold">MY PROFILE</h1>
         <button className="px-4 py-1 bg-black text-white rounded-lg text-sm"
@@ -114,8 +115,11 @@ const Profile = () => {
       </div>
 
       
+      {/* Main Section */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Left Card */}
         <div className="bg-white rounded-xl shadow p-6">
+          {/* Profile Photo */}
           <div className="flex flex-col items-center mb-6">
             <img
               src="https://cdn-icons-png.flaticon.com/128/1144/1144709.png"
@@ -127,6 +131,7 @@ const Profile = () => {
 
            <div className="border rounded-2xl p-6 mb-6 flex flex-col gap-4 bg-white shadow-sm">
 
+  {/* Single Item */}
   <div className="flex items-center justify-between border rounded-xl p-4 bg-gray-50 hover:bg-gray-100 transition">
     <span className="text-gray-600 text-sm font-medium">Your Name</span>
     <p className="font-semibold text-gray-800">{user.firstname} {user.lastname}</p>
